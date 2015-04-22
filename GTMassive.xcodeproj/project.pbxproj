@@ -8,6 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		13A5D92DCE802527D17B5843 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC44CFA6D52B8A9B3B2D6DCE /* libPods.a */; };
+		225137601AE8447F00E81D4D /* GTCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251375E1AE8447F00E81D4D /* GTCameraViewController.swift */; };
+		225137611AE8447F00E81D4D /* GTCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2251375F1AE8447F00E81D4D /* GTCameraViewController.xib */; };
+		225137641AE8475100E81D4D /* GTPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225137621AE8475100E81D4D /* GTPhotoViewController.swift */; };
+		225137651AE8475100E81D4D /* GTPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225137631AE8475100E81D4D /* GTPhotoViewController.xib */; };
+		225137691AE8553D00E81D4D /* menu-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 225137671AE8553D00E81D4D /* menu-button.png */; };
+		2251376A1AE8553D00E81D4D /* menu-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 225137681AE8553D00E81D4D /* menu-button@2x.png */; };
+		2251376E1AE8560C00E81D4D /* SlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2251376D1AE8560C00E81D4D /* SlideNavigationController.m */; };
+		225137811AE857F300E81D4D /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225137711AE857F300E81D4D /* LeftMenuViewController.m */; };
+		225137821AE857F300E81D4D /* RightMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225137731AE857F300E81D4D /* RightMenuViewController.m */; };
+		225137831AE857F300E81D4D /* SlideNavigationContorllerAnimatorSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = 225137751AE857F300E81D4D /* SlideNavigationContorllerAnimatorSlide.m */; };
+		225137841AE857F300E81D4D /* SlideNavigationContorllerAnimatorFade.m in Sources */ = {isa = PBXBuildFile; fileRef = 225137771AE857F300E81D4D /* SlideNavigationContorllerAnimatorFade.m */; };
+		225137851AE857F300E81D4D /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = 225137791AE857F300E81D4D /* SlideNavigationContorllerAnimatorSlideAndFade.m */; };
+		225137861AE857F300E81D4D /* SlideNavigationContorllerAnimatorScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 2251377B1AE857F300E81D4D /* SlideNavigationContorllerAnimatorScale.m */; };
+		225137871AE857F300E81D4D /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = 2251377D1AE857F300E81D4D /* SlideNavigationContorllerAnimatorScaleAndFade.m */; };
+		225137881AE857F300E81D4D /* SidebBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225137801AE857F300E81D4D /* SidebBarViewController.m */; };
 		22C713951AE71C7C00AAC563 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C713941AE71C7C00AAC563 /* AppDelegate.swift */; };
 		22C713971AE71C7C00AAC563 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C713961AE71C7C00AAC563 /* ViewController.swift */; };
 		22C7139A1AE71C7C00AAC563 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C713981AE71C7C00AAC563 /* Main.storyboard */; };
@@ -30,6 +45,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2251375E1AE8447F00E81D4D /* GTCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTCameraViewController.swift; sourceTree = "<group>"; };
+		2251375F1AE8447F00E81D4D /* GTCameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTCameraViewController.xib; sourceTree = "<group>"; };
+		225137621AE8475100E81D4D /* GTPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTPhotoViewController.swift; sourceTree = "<group>"; };
+		225137631AE8475100E81D4D /* GTPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTPhotoViewController.xib; sourceTree = "<group>"; };
+		225137671AE8553D00E81D4D /* menu-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-button.png"; sourceTree = "<group>"; };
+		225137681AE8553D00E81D4D /* menu-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-button@2x.png"; sourceTree = "<group>"; };
+		2251376C1AE8560C00E81D4D /* SlideNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationController.h; sourceTree = "<group>"; };
+		2251376D1AE8560C00E81D4D /* SlideNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationController.m; sourceTree = "<group>"; };
+		225137701AE857F300E81D4D /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuViewController.h; sourceTree = "<group>"; };
+		225137711AE857F300E81D4D /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuViewController.m; sourceTree = "<group>"; };
+		225137721AE857F300E81D4D /* RightMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightMenuViewController.h; sourceTree = "<group>"; };
+		225137731AE857F300E81D4D /* RightMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightMenuViewController.m; sourceTree = "<group>"; };
+		225137741AE857F300E81D4D /* SlideNavigationContorllerAnimatorSlide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorSlide.h; sourceTree = "<group>"; };
+		225137751AE857F300E81D4D /* SlideNavigationContorllerAnimatorSlide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorSlide.m; sourceTree = "<group>"; };
+		225137761AE857F300E81D4D /* SlideNavigationContorllerAnimatorFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorFade.h; sourceTree = "<group>"; };
+		225137771AE857F300E81D4D /* SlideNavigationContorllerAnimatorFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorFade.m; sourceTree = "<group>"; };
+		225137781AE857F300E81D4D /* SlideNavigationContorllerAnimatorSlideAndFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorSlideAndFade.h; sourceTree = "<group>"; };
+		225137791AE857F300E81D4D /* SlideNavigationContorllerAnimatorSlideAndFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorSlideAndFade.m; sourceTree = "<group>"; };
+		2251377A1AE857F300E81D4D /* SlideNavigationContorllerAnimatorScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorScale.h; sourceTree = "<group>"; };
+		2251377B1AE857F300E81D4D /* SlideNavigationContorllerAnimatorScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorScale.m; sourceTree = "<group>"; };
+		2251377C1AE857F300E81D4D /* SlideNavigationContorllerAnimatorScaleAndFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorScaleAndFade.h; sourceTree = "<group>"; };
+		2251377D1AE857F300E81D4D /* SlideNavigationContorllerAnimatorScaleAndFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorScaleAndFade.m; sourceTree = "<group>"; };
+		2251377E1AE857F300E81D4D /* SlideNavigationContorllerAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimator.h; sourceTree = "<group>"; };
+		2251377F1AE857F300E81D4D /* SidebBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebBarViewController.h; sourceTree = "<group>"; };
+		225137801AE857F300E81D4D /* SidebBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebBarViewController.m; sourceTree = "<group>"; };
 		22C7138F1AE71C7C00AAC563 /* GTMassive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GTMassive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C713931AE71C7C00AAC563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22C713941AE71C7C00AAC563 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +109,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		225137661AE8550A00E81D4D /* Image Assets */ = {
+			isa = PBXGroup;
+			children = (
+				225137671AE8553D00E81D4D /* menu-button.png */,
+				225137681AE8553D00E81D4D /* menu-button@2x.png */,
+			);
+			name = "Image Assets";
+			sourceTree = "<group>";
+		};
+		2251376B1AE855D400E81D4D /* Slide Nav Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2251376C1AE8560C00E81D4D /* SlideNavigationController.h */,
+				2251376D1AE8560C00E81D4D /* SlideNavigationController.m */,
+			);
+			name = "Slide Nav Controller";
+			sourceTree = "<group>";
+		};
+		2251376F1AE857D400E81D4D /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				225137701AE857F300E81D4D /* LeftMenuViewController.h */,
+				225137711AE857F300E81D4D /* LeftMenuViewController.m */,
+				225137721AE857F300E81D4D /* RightMenuViewController.h */,
+				225137731AE857F300E81D4D /* RightMenuViewController.m */,
+				225137741AE857F300E81D4D /* SlideNavigationContorllerAnimatorSlide.h */,
+				225137751AE857F300E81D4D /* SlideNavigationContorllerAnimatorSlide.m */,
+				225137761AE857F300E81D4D /* SlideNavigationContorllerAnimatorFade.h */,
+				225137771AE857F300E81D4D /* SlideNavigationContorllerAnimatorFade.m */,
+				225137781AE857F300E81D4D /* SlideNavigationContorllerAnimatorSlideAndFade.h */,
+				225137791AE857F300E81D4D /* SlideNavigationContorllerAnimatorSlideAndFade.m */,
+				2251377A1AE857F300E81D4D /* SlideNavigationContorllerAnimatorScale.h */,
+				2251377B1AE857F300E81D4D /* SlideNavigationContorllerAnimatorScale.m */,
+				2251377C1AE857F300E81D4D /* SlideNavigationContorllerAnimatorScaleAndFade.h */,
+				2251377D1AE857F300E81D4D /* SlideNavigationContorllerAnimatorScaleAndFade.m */,
+				2251377E1AE857F300E81D4D /* SlideNavigationContorllerAnimator.h */,
+				2251377F1AE857F300E81D4D /* SidebBarViewController.h */,
+				225137801AE857F300E81D4D /* SidebBarViewController.m */,
+			);
+			name = Animations;
+			sourceTree = "<group>";
+		};
 		22C713861AE71C7B00AAC563 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +174,9 @@
 		22C713911AE71C7C00AAC563 /* GTMassive */ = {
 			isa = PBXGroup;
 			children = (
+				2251376F1AE857D400E81D4D /* Animations */,
+				2251376B1AE855D400E81D4D /* Slide Nav Controller */,
+				225137661AE8550A00E81D4D /* Image Assets */,
 				22C713B91AE7338600AAC563 /* Cells */,
 				22C713B61AE72E5000AAC563 /* ViewController */,
 				22C713941AE71C7C00AAC563 /* AppDelegate.swift */,
@@ -135,6 +220,10 @@
 			isa = PBXGroup;
 			children = (
 				22C713B71AE72EA800AAC563 /* GTMassiveTimeline.swift */,
+				2251375E1AE8447F00E81D4D /* GTCameraViewController.swift */,
+				2251375F1AE8447F00E81D4D /* GTCameraViewController.xib */,
+				225137621AE8475100E81D4D /* GTPhotoViewController.swift */,
+				225137631AE8475100E81D4D /* GTPhotoViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -249,7 +338,11 @@
 			files = (
 				22C7139A1AE71C7C00AAC563 /* Main.storyboard in Resources */,
 				22C7139F1AE71C7C00AAC563 /* LaunchScreen.xib in Resources */,
+				225137611AE8447F00E81D4D /* GTCameraViewController.xib in Resources */,
 				22C713BF1AE7351600AAC563 /* GTTableViewCell.xib in Resources */,
+				225137651AE8475100E81D4D /* GTPhotoViewController.xib in Resources */,
+				2251376A1AE8553D00E81D4D /* menu-button@2x.png in Resources */,
+				225137691AE8553D00E81D4D /* menu-button.png in Resources */,
 				22C7139C1AE71C7C00AAC563 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,10 +394,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225137841AE857F300E81D4D /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				22C713B81AE72EA800AAC563 /* GTMassiveTimeline.swift in Sources */,
+				225137851AE857F300E81D4D /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
+				225137881AE857F300E81D4D /* SidebBarViewController.m in Sources */,
 				22C713971AE71C7C00AAC563 /* ViewController.swift in Sources */,
+				225137831AE857F300E81D4D /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
+				225137811AE857F300E81D4D /* LeftMenuViewController.m in Sources */,
+				225137821AE857F300E81D4D /* RightMenuViewController.m in Sources */,
 				22C713BE1AE7351600AAC563 /* GTTableViewCell.swift in Sources */,
 				22C713951AE71C7C00AAC563 /* AppDelegate.swift in Sources */,
+				225137871AE857F300E81D4D /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
+				225137641AE8475100E81D4D /* GTPhotoViewController.swift in Sources */,
+				225137601AE8447F00E81D4D /* GTCameraViewController.swift in Sources */,
+				2251376E1AE8560C00E81D4D /* SlideNavigationController.m in Sources */,
+				225137861AE857F300E81D4D /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

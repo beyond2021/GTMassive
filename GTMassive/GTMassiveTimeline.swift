@@ -87,6 +87,9 @@ class GTMassiveTimeline: PFQueryTableViewController {
             cell = NSBundle.mainBundle().loadNibNamed("GTTableViewCell", owner: self, options: nil)[0] as? GTTableViewCell
         }
         
+                cell?.parseObject = object
+        
+        
         if let pfObject = object {
             cell?.gtNameLabel?.text = pfObject["name"] as? String
             

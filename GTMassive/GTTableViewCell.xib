@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -43,21 +43,31 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw" translatesAutoresizingMaskIntoConstraints="NO" id="YPL-R5-GgQ">
+                        <rect key="frame" x="85" y="85" width="150" height="150"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="150" id="QrL-d9-kjb"/>
+                            <constraint firstAttribute="width" constant="150" id="uC1-Pe-xqp"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Yau-Go-3rc" secondAttribute="trailing" constant="15" id="DIJ-3G-mJw"/>
                     <constraint firstItem="Yau-Go-3rc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="LuP-3x-ate"/>
                     <constraint firstAttribute="centerX" secondItem="Yau-Go-3rc" secondAttribute="centerX" id="O5A-Fe-Rh9"/>
                     <constraint firstAttribute="bottom" secondItem="9hv-Q1-mbr" secondAttribute="bottom" constant="11" id="ROz-tN-aag"/>
+                    <constraint firstAttribute="centerX" secondItem="YPL-R5-GgQ" secondAttribute="centerX" id="XU7-hw-Z9V"/>
                     <constraint firstItem="Uzj-pD-h9S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="abw-kt-V7a"/>
                     <constraint firstAttribute="trailing" secondItem="Ah5-mi-Gdd" secondAttribute="trailing" constant="15" id="jTL-wg-n3M"/>
                     <constraint firstItem="Ah5-mi-Gdd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="285" id="rLI-CY-Obv"/>
                     <constraint firstAttribute="trailing" secondItem="9hv-Q1-mbr" secondAttribute="trailing" constant="28" id="rRK-ge-hoX"/>
+                    <constraint firstItem="YPL-R5-GgQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="85" id="vVy-aY-hKV"/>
                     <constraint firstAttribute="bottom" secondItem="Uzj-pD-h9S" secondAttribute="bottom" constant="11" id="xaD-ln-n86"/>
                     <constraint firstItem="Yau-Go-3rc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="yzk-da-Hpm"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="catPawIcon" destination="YPL-R5-GgQ" id="rAE-fF-SjE"/>
                 <outlet property="gtCreditLabel" destination="Ah5-mi-Gdd" id="miT-hA-DoR"/>
                 <outlet property="gtImageView" destination="Yau-Go-3rc" id="4Wb-eM-h5V"/>
                 <outlet property="gtNameLabel" destination="Uzj-pD-h9S" id="sVL-pM-DiK"/>
@@ -66,4 +76,7 @@
             <point key="canvasLocation" x="305" y="444"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="paw" width="100" height="100"/>
+    </resources>
 </document>
