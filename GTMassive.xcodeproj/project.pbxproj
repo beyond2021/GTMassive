@@ -37,6 +37,8 @@
 		22C713A41AE71C7C00AAC563 /* GTMassiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GTMassiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C713A91AE71C7C00AAC563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22C713AA1AE71C7C00AAC563 /* GTMassiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTMassiveTests.swift; sourceTree = "<group>"; };
+		22C713B41AE72C0900AAC563 /* GTMassive-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GTMassive-Bridging-Header.h"; sourceTree = "<group>"; };
+		22C713B51AE72C0900AAC563 /* Car_Paws.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car_Paws.h; sourceTree = "<group>"; };
 		DC44CFA6D52B8A9B3B2D6DCE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01BBA973A6D18A4E7A4E044 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F906E6831DEBCB956BB8AAB8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +92,8 @@
 				22C7139B1AE71C7C00AAC563 /* Images.xcassets */,
 				22C7139D1AE71C7C00AAC563 /* LaunchScreen.xib */,
 				22C713921AE71C7C00AAC563 /* Supporting Files */,
+				22C713B51AE72C0900AAC563 /* Car_Paws.h */,
+				22C713B41AE72C0900AAC563 /* GTMassive-Bridging-Header.h */,
 			);
 			path = GTMassive;
 			sourceTree = "<group>";
@@ -398,9 +402,12 @@
 			baseConfigurationReference = F906E6831DEBCB956BB8AAB8 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = GTMassive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GTMassive/GTMassive-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -409,9 +416,11 @@
 			baseConfigurationReference = E01BBA973A6D18A4E7A4E044 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = GTMassive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GTMassive/GTMassive-Bridging-Header.h";
 			};
 			name = Release;
 		};
