@@ -10,7 +10,7 @@ import UIKit
 
 class GTMassiveTimeline: PFQueryTableViewController {
     
-    
+    let cellIdentifier:String = "GTCell"
     override init(style: UITableViewStyle, className: String!)
     {
         super.init(style: style, className: className)
@@ -20,6 +20,9 @@ class GTMassiveTimeline: PFQueryTableViewController {
         self.objectsPerPage = 25
         
         self.parseClassName = className
+        
+        self.tableView.rowHeight = 350
+        self.tableView.allowsSelection = false
     }
     
     required init(coder aDecoder:NSCoder)
@@ -32,6 +35,9 @@ class GTMassiveTimeline: PFQueryTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        tableView.registerNib(UINib(nibName: "GTTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -58,18 +64,82 @@ class GTMassiveTimeline: PFQueryTableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell? {
         
-        let cellIdentifier:String = "Cell"
+       // let cellIdentifier:String = "Cell"
         
-        var cell:PFTableViewCell? = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as? PFTableViewCell
+//        var cell:PFTableViewCell? = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as? PFTableViewCell
+//        
+//        if(cell == nil) {
+//            cell = PFTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellIdentifier)
+//        }
+//        
+//        if let pfObject = object {
+//            cell?.textLabel?.text = pfObject["name"] as? String
+//        }
+//        
+//        return cell;
+//    }
+        
+        var cell:GTTableViewCell? = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as? GTTableViewCell
         
         if(cell == nil) {
-            cell = PFTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellIdentifier)
+            cell = NSBundle.mainBundle().loadNibNamed("GTTableViewCell", owner: self, options: nil)[0] as? GTTableViewCell
         }
         
         if let pfObject = object {
-            cell?.textLabel?.text = pfObject["name"] as? String
+            cell?.gtNameLabel?.text = pfObject["name"] as? String
+            
+            var votes:Int? = pfObject["votes"] as? Int
+            if votes == nil {
+                votes = 0
+            }
+            cell?.gtVotesLabel?.text = "\(votes!) votes"
+            
+            var credit:String? = pfObject["cc_by"] as? String
+            if credit != nil {
+                cell?.gtCreditLabel?.text = "\(credit!) / CC 2.0"
+            }
+            //Loading the image
+            cell?.gtImageView?.image = nil
+            if var urlString:String? = pfObject["url"] as? String {
+                var url:NSURL? = NSURL(string: urlString!)
+                
+                if var url:NSURL? = NSURL(string: urlString!) {
+                    var error:NSError?
+                    var request:NSURLRequest = NSURLRequest(URL: url!, cachePolicy: NSURLRequestCachePolicy.ReturnCacheDataElseLoad, timeoutInterval: 5.0)
+                    
+                    NSOperationQueue.mainQueue().cancelAllOperations()
+                    
+                    
+//                    var imgURL: NSURL = NSURL(string: url!)!
+//                    var request: NSURLRequest = NSURLRequest(URL: imgURL)
+                    
+                    NSURLConnection.sendAsynchronousRequest (request,
+                        queue:NSOperationQueue.mainQueue(),
+                        completionHandler: {
+                            (response: NSURLResponse!, data: NSData!,error: NSError!) -> Void in
+                            if error == nil {
+                                dispatch_async(dispatch_get_main_queue(), {
+                                    // No point making an image unless the 'cont' exists
+                                //    cont?(UIImage(data: data))
+                                    cell?.gtImageView?.image = UIImage(data: data)
+                                    return
+                                })
+                            }
+                            else { println ("Error") }
+                    })
+//                    NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {
+//                        (response:NSURLResponse!, imageData:NSData!, error:NSError!) -> Void in
+//                        
+//                        cell?.gtImageView?.image = UIImage(data: imageData)
+//                        
+//                    })
+                }
+            }
+            
+            
         }
         
-        return cell;
+        return cell
     }
+    
 }
