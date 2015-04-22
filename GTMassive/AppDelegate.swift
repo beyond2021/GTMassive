@@ -18,6 +18,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Parse.setApplicationId("lywnNYHsHEgkUM0svF4YpkF1XlDRSDJw5kDJpO5p", clientKey: "df4SJ4mkKwbkCUySMgsJM8hrEMJG71ZbQ58anskm")
         
+        var tableVC:GTMassiveTimeline = GTMassiveTimeline(className: "Cat")
+        tableVC.title = "GT"
+        
+        UINavigationBar.appearance().tintColor = UIColor(red: 0.05, green: 0.47, blue: 0.91, alpha: 1.0)
+        UINavigationBar.appearance().barTintColor = UIColor(red: 0.05, green: 0.47, blue: 0.91, alpha: 1.0)
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        
+        
+        var navigationVC:UINavigationController = UINavigationController(rootViewController: tableVC)
+        
+        let frame = UIScreen.mainScreen().bounds
+        window = UIWindow(frame: frame)
+        
+        window!.rootViewController = navigationVC
+        window!.makeKeyAndVisible()
+        
+       // return true
+        
+        
+        
         return true
     }
 

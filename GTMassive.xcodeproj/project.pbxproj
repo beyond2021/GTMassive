@@ -14,6 +14,7 @@
 		22C7139C1AE71C7C00AAC563 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C7139B1AE71C7C00AAC563 /* Images.xcassets */; };
 		22C7139F1AE71C7C00AAC563 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C7139D1AE71C7C00AAC563 /* LaunchScreen.xib */; };
 		22C713AB1AE71C7C00AAC563 /* GTMassiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C713AA1AE71C7C00AAC563 /* GTMassiveTests.swift */; };
+		22C713B81AE72EA800AAC563 /* GTMassiveTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C713B71AE72EA800AAC563 /* GTMassiveTimeline.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		22C713AA1AE71C7C00AAC563 /* GTMassiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTMassiveTests.swift; sourceTree = "<group>"; };
 		22C713B41AE72C0900AAC563 /* GTMassive-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GTMassive-Bridging-Header.h"; sourceTree = "<group>"; };
 		22C713B51AE72C0900AAC563 /* Car_Paws.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car_Paws.h; sourceTree = "<group>"; };
+		22C713B71AE72EA800AAC563 /* GTMassiveTimeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTMassiveTimeline.swift; sourceTree = "<group>"; };
 		DC44CFA6D52B8A9B3B2D6DCE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01BBA973A6D18A4E7A4E044 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F906E6831DEBCB956BB8AAB8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		22C713911AE71C7C00AAC563 /* GTMassive */ = {
 			isa = PBXGroup;
 			children = (
+				22C713B61AE72E5000AAC563 /* ViewController */,
 				22C713941AE71C7C00AAC563 /* AppDelegate.swift */,
 				22C713961AE71C7C00AAC563 /* ViewController.swift */,
 				22C713981AE71C7C00AAC563 /* Main.storyboard */,
@@ -121,6 +124,14 @@
 				22C713A91AE71C7C00AAC563 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		22C713B61AE72E5000AAC563 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				22C713B71AE72EA800AAC563 /* GTMassiveTimeline.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		C5C03D0C46E319E82BCAC9AA /* Frameworks */ = {
@@ -275,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22C713B81AE72EA800AAC563 /* GTMassiveTimeline.swift in Sources */,
 				22C713971AE71C7C00AAC563 /* ViewController.swift in Sources */,
 				22C713951AE71C7C00AAC563 /* AppDelegate.swift in Sources */,
 			);
