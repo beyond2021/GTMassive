@@ -12,6 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let slideNav = SlideNavigationController()
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -26,8 +27,60 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         
+//        let leftMenu = LeftMenuViewController(nibName: "LeftMenuViewController", bundle: nil)
+//        let rightMenu = RightMenuViewController(nibName: "GTCameraViewController", bundle: 
+        // nil)
         
-        var navigationVC:UINavigationController = UINavigationController(rootViewController: tableVC)
+        
+        
+        
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+        let leftMenu = mainStoryBoard.instantiateViewControllerWithIdentifier("LeftMenuViewController")as! LeftMenuViewController
+        let rightMenu = mainStoryBoard.instantiateViewControllerWithIdentifier("GTCameraViewController")as! GTCameraViewController
+        
+        
+        SlideNavigationController.sharedInstance().rightMenu = rightMenu
+        SlideNavigationController.sharedInstance().leftMenu = leftMenu
+        
+        
+        
+               let rightButton = UIButton(frame: CGRectMake(0, 0, 30, 30))
+        let rightButtonImage = UIImage(named: "gear")
+        
+        rightButton.setImage(rightButtonImage, forState: UIControlState.Normal)
+        rightButton.addTarget(SlideNavigationController.sharedInstance(), action: "toggleRightMenu", forControlEvents: UIControlEvents.TouchUpInside)
+        let rightBarButtonItem = UIBarButtonItem(customView: rightButton)
+        
+         SlideNavigationController.sharedInstance().rightBarButtonItem = rightBarButtonItem
+        
+        
+        /*
+        
+        NSNotificationCenter.defaultCenter().addObserverForName(SlideNavigationControllerDidClose, object: nil, queue: nil) { (note:NSNotification) -> Void in
+            
+            let menu:NString = note.userInfo["menu"]
+           // println("Closed ",\(menu))
+            
+        }
+        
+        NSNotificationCenter.defaultCenter().addObserverForName(SlideNavigationControllerDidOpen, object: nil, queue: nil) { (note:NSNotification) -> Void in
+            
+            let menu:NString = note.userInfo["menu"]
+          //  println("Opened"\(menu))
+            
+        }
+*/
+ 
+        
+        
+        
+        
+        
+        
+        
+      //  var navigationVC:UINavigationController = UINavigationController(rootViewController: tableVC)
+        
+        var navigationVC:SlideNavigationController = SlideNavigationController(rootViewController: tableVC)
         
         let frame = UIScreen.mainScreen().bounds
         window = UIWindow(frame: frame)

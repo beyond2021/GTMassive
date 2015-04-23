@@ -19,11 +19,19 @@ class GTCameraViewController: UIViewController {
     var stillImage:UIImage?
     
     var cameraPreviewLayer:AVCaptureVideoPreviewLayer?
+    //@property (nonatomic, assign) BOOL slideOutAnimationEnabled;
+    
+    var slideOutAnimationEnabled = true
+    
     
     @IBOutlet weak var cameraButton:UIButton!
   
     override func viewDidLoad() {
         super.viewDidLoad()
+       // self.slideOutAnimationEnabled = YES;
+        slideOutAnimationEnabled = true
+        
+        
         // Preset the session for taking photo in full resolution
         captureSession.sessionPreset = AVCaptureSessionPresetPhoto
         

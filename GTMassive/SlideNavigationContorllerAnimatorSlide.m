@@ -59,6 +59,12 @@
         : [SlideNavigationController sharedInstance].rightMenu;
 	
 	UIInterfaceOrientation orientation= [SlideNavigationController sharedInstance].interfaceOrientation;
+    
+ //    [UIDevice currentDevice].orientation = [SlideNavigationController sharedInstance].orientation;
+    
+  //  UIDeviceOrientation orientation= [SlideNavigationController sharedInstance].[[UIDevice currentDevice].orientation];
+    
+    
 	CGRect rect = menuViewController.view.frame;
 	
     if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0"))

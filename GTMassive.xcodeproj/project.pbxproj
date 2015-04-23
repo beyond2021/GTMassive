@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		13A5D92DCE802527D17B5843 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC44CFA6D52B8A9B3B2D6DCE /* libPods.a */; };
+		2214CFFB1AE90AFC0026C7BA /* GTHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214CFF91AE90AFC0026C7BA /* GTHeaderView.swift */; };
+		2214CFFC1AE90AFC0026C7BA /* GTHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2214CFFA1AE90AFC0026C7BA /* GTHeaderView.xib */; };
 		225137601AE8447F00E81D4D /* GTCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251375E1AE8447F00E81D4D /* GTCameraViewController.swift */; };
-		225137611AE8447F00E81D4D /* GTCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2251375F1AE8447F00E81D4D /* GTCameraViewController.xib */; };
 		225137641AE8475100E81D4D /* GTPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225137621AE8475100E81D4D /* GTPhotoViewController.swift */; };
-		225137651AE8475100E81D4D /* GTPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225137631AE8475100E81D4D /* GTPhotoViewController.xib */; };
 		225137691AE8553D00E81D4D /* menu-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 225137671AE8553D00E81D4D /* menu-button.png */; };
 		2251376A1AE8553D00E81D4D /* menu-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 225137681AE8553D00E81D4D /* menu-button@2x.png */; };
 		2251376E1AE8560C00E81D4D /* SlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2251376D1AE8560C00E81D4D /* SlideNavigationController.m */; };
@@ -45,10 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2214CFF91AE90AFC0026C7BA /* GTHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTHeaderView.swift; sourceTree = "<group>"; };
+		2214CFFA1AE90AFC0026C7BA /* GTHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTHeaderView.xib; sourceTree = "<group>"; };
 		2251375E1AE8447F00E81D4D /* GTCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTCameraViewController.swift; sourceTree = "<group>"; };
-		2251375F1AE8447F00E81D4D /* GTCameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTCameraViewController.xib; sourceTree = "<group>"; };
 		225137621AE8475100E81D4D /* GTPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTPhotoViewController.swift; sourceTree = "<group>"; };
-		225137631AE8475100E81D4D /* GTPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTPhotoViewController.xib; sourceTree = "<group>"; };
 		225137671AE8553D00E81D4D /* menu-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-button.png"; sourceTree = "<group>"; };
 		225137681AE8553D00E81D4D /* menu-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-button@2x.png"; sourceTree = "<group>"; };
 		2251376C1AE8560C00E81D4D /* SlideNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationController.h; sourceTree = "<group>"; };
@@ -109,6 +109,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2214CFF81AE909C70026C7BA /* HeaderViews */ = {
+			isa = PBXGroup;
+			children = (
+				2214CFF91AE90AFC0026C7BA /* GTHeaderView.swift */,
+				2214CFFA1AE90AFC0026C7BA /* GTHeaderView.xib */,
+			);
+			name = HeaderViews;
+			sourceTree = "<group>";
+		};
 		225137661AE8550A00E81D4D /* Image Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,9 +230,7 @@
 			children = (
 				22C713B71AE72EA800AAC563 /* GTMassiveTimeline.swift */,
 				2251375E1AE8447F00E81D4D /* GTCameraViewController.swift */,
-				2251375F1AE8447F00E81D4D /* GTCameraViewController.xib */,
 				225137621AE8475100E81D4D /* GTPhotoViewController.swift */,
-				225137631AE8475100E81D4D /* GTPhotoViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -231,6 +238,7 @@
 		22C713B91AE7338600AAC563 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				2214CFF81AE909C70026C7BA /* HeaderViews */,
 				22C713BC1AE7351600AAC563 /* GTTableViewCell.swift */,
 				22C713BD1AE7351600AAC563 /* GTTableViewCell.xib */,
 			);
@@ -337,10 +345,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				22C7139A1AE71C7C00AAC563 /* Main.storyboard in Resources */,
+				2214CFFC1AE90AFC0026C7BA /* GTHeaderView.xib in Resources */,
 				22C7139F1AE71C7C00AAC563 /* LaunchScreen.xib in Resources */,
-				225137611AE8447F00E81D4D /* GTCameraViewController.xib in Resources */,
 				22C713BF1AE7351600AAC563 /* GTTableViewCell.xib in Resources */,
-				225137651AE8475100E81D4D /* GTPhotoViewController.xib in Resources */,
 				2251376A1AE8553D00E81D4D /* menu-button@2x.png in Resources */,
 				225137691AE8553D00E81D4D /* menu-button.png in Resources */,
 				22C7139C1AE71C7C00AAC563 /* Images.xcassets in Resources */,
@@ -406,6 +413,7 @@
 				22C713951AE71C7C00AAC563 /* AppDelegate.swift in Sources */,
 				225137871AE857F300E81D4D /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
 				225137641AE8475100E81D4D /* GTPhotoViewController.swift in Sources */,
+				2214CFFB1AE90AFC0026C7BA /* GTHeaderView.swift in Sources */,
 				225137601AE8447F00E81D4D /* GTCameraViewController.swift in Sources */,
 				2251376E1AE8560C00E81D4D /* SlideNavigationController.m in Sources */,
 				225137861AE857F300E81D4D /* SlideNavigationContorllerAnimatorScale.m in Sources */,

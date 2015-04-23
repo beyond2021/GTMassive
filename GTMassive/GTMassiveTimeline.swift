@@ -8,7 +8,12 @@
 
 import UIKit
 
-class GTMassiveTimeline: PFQueryTableViewController {
+class GTMassiveTimeline: PFQueryTableViewController, SlideNavigationControllerDelegate {
+    //@property (nonatomic, assign) BOOL slideOutAnimationEnabled;
+    
+    var slideOutAnimationEnabled = true
+    let camera = GTCameraViewController()
+    
     
     let cellIdentifier:String = "GTCell"
     var postShown = [Bool](count: 25, repeatedValue: false)
@@ -23,7 +28,7 @@ class GTMassiveTimeline: PFQueryTableViewController {
         
         self.parseClassName = className
         
-        self.tableView.rowHeight = 350
+        self.tableView.rowHeight = 550
         self.tableView.allowsSelection = false
     }
     
@@ -42,6 +47,36 @@ class GTMassiveTimeline: PFQueryTableViewController {
         tableView.registerNib(UINib(nibName: "GTTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
 
         // Do any additional setup after loading the view.
+        slideOutAnimationEnabled = true;
+        
+        SlideNavigationController.sharedInstance().enableShadow = true
+        SlideNavigationController.sharedInstance().enableSwipeGesture = true
+        
+        let portOffset = NSInteger(SlideNavigationController.sharedInstance().portraitSlideOffset)
+        
+        indexFromPixels(portOffset)
+        
+        SlideNavigationController.sharedInstance().enableSwipeGesture = true
+        SlideNavigationController.sharedInstance().enableShadow = true
+   //     SlideNavigationController.sharedInstance().panGestureSideOffset = false
+//        
+//        [SlideNavigationController sharedInstance].panGestureSideOffset =  NO;
+        
+//        LeftMenuViewController.SlideNavigationController.sharedInstance()SlideNavigationController.sharedInstance() = true
+        
+        
+  //   (SlideNavigationController.sharedInstance().leftMenu).slideOutAnimationEnabled  = true
+        
+        
+        
+        //
+ //       ((LeftMenuViewController *)[SlideNavigationController sharedInstance].leftMenu).slideOutAnimationEnabled = YES;
+        
+        
+//       let cameraController = SlideNavigationController.sharedInstance().rightMenu as! GTCameraViewController
+//        cameraController.slideOutAnimationEnabled = true
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -168,7 +203,48 @@ class GTMassiveTimeline: PFQueryTableViewController {
         
     }
 
+    //MARK: - Navigation Bar
     
+    func slideNavigationControllerShouldDisplayLeftMenu() -> Bool{
+        
+        return true
+    }
+    func slideNavigationControllerShouldDisplayRightMenu() -> Bool{
+        
+        return true
+    }
+    
+    //MARK: - Helpers -
+    
+    func indexFromPixels(pixels:NSInteger) -> NSInteger{
+        
+        if pixels == 60{
+            return 0
+        }
+        if pixels == 120{
+            return 1
+        }
+        return 2
+    }
+    
+    func pixelsFromIndex(index:NSInteger) -> NSInteger{
+        
+        switch (index) {
+  case 0:
+    return 60
+        case 1:
+        return 120
+        case 2:
+            return 200
+        break;
+
+  default:
+    return 0
+    break;
+}
+        
+    }
+
     
     
 }
