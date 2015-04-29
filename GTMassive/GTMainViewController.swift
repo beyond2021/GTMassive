@@ -1,22 +1,19 @@
 //
-//  GTPhotoViewController.swift
+//  GTMainViewController.swift
 //  GTMassive
 //
-//  Created by KEEVIN MITCHELL on 4/22/15.
+//  Created by KEEVIN MITCHELL on 4/24/15.
 //  Copyright (c) 2015 Beyond 2021. All rights reserved.
 //
 
 import UIKit
 
-class GTPhotoViewController: UIViewController {
-    
-    @IBOutlet weak var imageView:UIImageView!
-    var image:UIImage!
-    
+class GTMainViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageView.image = image
+        self.title = "GT GOSSIP"
 
         // Do any additional setup after loading the view.
     }
@@ -27,10 +24,6 @@ class GTPhotoViewController: UIViewController {
     }
     
 
-    @IBAction func save(sender: AnyObject) {
-        
-    }
-    
     /*
     // MARK: - Navigation
 

@@ -10,10 +10,15 @@ import UIKit
 import AVFoundation
 
 class GTCameraViewController: UIViewController {
+    
+    var toggleCameraGestureRecognizer = UISwipeGestureRecognizer() // Swipe for front and back camera
     let captureSession = AVCaptureSession()
     var backFacingCamera:AVCaptureDevice?
     var frontFacingCamera:AVCaptureDevice?
     var currentDevice:AVCaptureDevice?
+    
+    var zoomInGestureRecognizer = UISwipeGestureRecognizer()//Camera Zoom in
+    var zoomOutGestureRecognizer = UISwipeGestureRecognizer()//Camera Zoom out
     
     var stillImageOutput:AVCaptureStillImageOutput?
     var stillImage:UIImage?
@@ -28,6 +33,20 @@ class GTCameraViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Toggle Camera recognizer
+        toggleCameraGestureRecognizer.direction = .Up
+        toggleCameraGestureRecognizer.addTarget(self, action: "toggleCamera")
+        view.addGestureRecognizer(toggleCameraGestureRecognizer)
+        
+        // Zoom In recognizer
+        zoomInGestureRecognizer.direction = .Right
+        zoomInGestureRecognizer.addTarget(self, action: "zoomIn")
+        view.addGestureRecognizer(zoomInGestureRecognizer)
+        // Zoom Out recognizer
+        zoomOutGestureRecognizer.direction = .Left
+        zoomOutGestureRecognizer.addTarget(self, action: "zoomOut")
+        view.addGestureRecognizer(zoomOutGestureRecognizer)
+        
        // self.slideOutAnimationEnabled = YES;
         slideOutAnimationEnabled = true
         
@@ -94,9 +113,48 @@ class GTCameraViewController: UIViewController {
             // Pass the selected object to the new view controller.
             if segue.identifier == "showPhoto" {
             let photoViewController = segue.destinationViewController as! GTPhotoViewController
-            photoViewController.imageView.image = stillImage
+            photoViewController.image = stillImage
             }
     }
     
-
+    //MARK: - Toggle Camera
+    func toggleCamera() {
+        captureSession.beginConfiguration()
+        var error: NSError?
+        // Change the device based on the current camera
+        let newDevice = (currentDevice?.position == AVCaptureDevicePosition.Back) ? frontFacingCamera : backFacingCamera
+        // Remove all inputs from the session
+        for input in captureSession.inputs {
+        captureSession.removeInput(input as! AVCaptureDeviceInput)
+        }
+        // Change to the new input
+        let cameraInput = AVCaptureDeviceInput(device: newDevice, error: &error)
+        if captureSession.canAddInput(cameraInput) {
+        captureSession.addInput(cameraInput)
+        }
+        currentDevice = newDevice
+        captureSession.commitConfiguration()
+    }
+    
+    //MARK: - Zoom Camera
+    func zoomIn() {
+                if var zoomFactor = currentDevice?.videoZoomFactor {
+                if zoomFactor < 5.0 {
+                let newZoomFactor = min(zoomFactor + 1.0, 5.0)
+                currentDevice?.lockForConfiguration(nil)
+                currentDevice?.rampToVideoZoomFactor(newZoomFactor, withRate: 1.0)
+                currentDevice?.unlockForConfiguration()
+                }
+                }
+    }
+    func zoomOut() {
+                if var zoomFactor = currentDevice?.videoZoomFactor {
+                if zoomFactor > 1.0 {
+                let newZoomFactor = max(zoomFactor - 1.0, 1.0)
+                currentDevice?.lockForConfiguration(nil)
+                currentDevice?.rampToVideoZoomFactor(newZoomFactor, withRate: 1.0)
+                currentDevice?.unlockForConfiguration()
+                }
+                }
+    }
 }

@@ -13,30 +13,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let slideNav = SlideNavigationController()
+    
+    struct SlideNav{
+        static let DidClose = "DidClose"
+        static let DidOpen = "DidOpen"
+        static let DidReveal = "DidReveal"
+    }
+
+
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         Parse.setApplicationId("lywnNYHsHEgkUM0svF4YpkF1XlDRSDJw5kDJpO5p", clientKey: "df4SJ4mkKwbkCUySMgsJM8hrEMJG71ZbQ58anskm")
         
-        var tableVC:GTMassiveTimeline = GTMassiveTimeline(className: "Cat")
-        tableVC.title = "GT"
+//        var tableVC:GTMassiveTimeline = GTMassiveTimeline(className: "Cat")
+//        tableVC.title = "GT"
         
-        UINavigationBar.appearance().tintColor = UIColor(red: 0.05, green: 0.47, blue: 0.91, alpha: 1.0)
+        
+        
+        
+        
+        //UINavigationBar.appearance().tintColor = UIColor(red: 0.05, green: 0.47, blue: 0.91, alpha: 1.0)
         UINavigationBar.appearance().barTintColor = UIColor(red: 0.05, green: 0.47, blue: 0.91, alpha: 1.0)
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         
-//        let leftMenu = LeftMenuViewController(nibName: "LeftMenuViewController", bundle: nil)
-//        let rightMenu = RightMenuViewController(nibName: "GTCameraViewController", bundle: 
-        // nil)
+
         
         
         
         
         let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
         let leftMenu = mainStoryBoard.instantiateViewControllerWithIdentifier("LeftMenuViewController")as! LeftMenuViewController
-        let rightMenu = mainStoryBoard.instantiateViewControllerWithIdentifier("GTCameraViewController")as! GTCameraViewController
+        let rightMenu = mainStoryBoard.instantiateViewControllerWithIdentifier("RightMenuViewController")as! RightMenuViewController
         
         
         SlideNavigationController.sharedInstance().rightMenu = rightMenu
@@ -53,23 +64,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
          SlideNavigationController.sharedInstance().rightBarButtonItem = rightBarButtonItem
         
+        let center = NSNotificationCenter.defaultCenter()
+        let queue = NSOperationQueue.mainQueue()
         
-        /*
+        let closeNotification = NSNotification(name: SlideNavigationControllerDidClose, object: self, userInfo: nil)
+        center.postNotification(closeNotification)
         
-        NSNotificationCenter.defaultCenter().addObserverForName(SlideNavigationControllerDidClose, object: nil, queue: nil) { (note:NSNotification) -> Void in
-            
-            let menu:NString = note.userInfo["menu"]
-           // println("Closed ",\(menu))
-            
-        }
         
-        NSNotificationCenter.defaultCenter().addObserverForName(SlideNavigationControllerDidOpen, object: nil, queue: nil) { (note:NSNotification) -> Void in
-            
-            let menu:NString = note.userInfo["menu"]
-          //  println("Opened"\(menu))
-            
-        }
-*/
+        let openNotification = NSNotification(name: SlideNavigationControllerDidOpen, object: self, userInfo: nil)
+        center.postNotification(openNotification)
+        
+        let revealNotification = NSNotification(name: SlideNavigationControllerDidReveal, object: self, userInfo: nil)
+        center.postNotification(revealNotification)
+
+        
+        
+        
+//        NSNotificationCenter.defaultCenter().addObserverForName(SlideNavigationControllerDidOpen, object: nil, queue: queue) { (note:NSNotification) -> Void in
+//            
+//            let menu:NString = note.userInfo["menu"]
+//          //  println("Opened"\(menu))
+//            
+//        }
+
  
         
         
@@ -80,13 +97,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
       //  var navigationVC:UINavigationController = UINavigationController(rootViewController: tableVC)
         
-        var navigationVC:SlideNavigationController = SlideNavigationController(rootViewController: tableVC)
-        
-        let frame = UIScreen.mainScreen().bounds
-        window = UIWindow(frame: frame)
-        
-        window!.rootViewController = navigationVC
-        window!.makeKeyAndVisible()
+//        var navigationVC:SlideNavigationController = SlideNavigationController(rootViewController: tableVC)
+//        
+//        let frame = UIScreen.mainScreen().bounds
+//        window = UIWindow(frame: frame)
+//        
+//        window!.rootViewController = navigationVC
+//        window!.makeKeyAndVisible()
         
        // return true
         

@@ -23,15 +23,17 @@
 		225137861AE857F300E81D4D /* SlideNavigationContorllerAnimatorScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 2251377B1AE857F300E81D4D /* SlideNavigationContorllerAnimatorScale.m */; };
 		225137871AE857F300E81D4D /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = 2251377D1AE857F300E81D4D /* SlideNavigationContorllerAnimatorScaleAndFade.m */; };
 		225137881AE857F300E81D4D /* SidebBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225137801AE857F300E81D4D /* SidebBarViewController.m */; };
+		22B713721AEB42A80074EF70 /* GTMassiveTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B713711AEB42A80074EF70 /* GTMassiveTimeline.swift */; };
+		22B713741AEB43EF0074EF70 /* GTMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B713731AEB43EF0074EF70 /* GTMainViewController.swift */; };
 		22C713951AE71C7C00AAC563 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C713941AE71C7C00AAC563 /* AppDelegate.swift */; };
 		22C713971AE71C7C00AAC563 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C713961AE71C7C00AAC563 /* ViewController.swift */; };
 		22C7139A1AE71C7C00AAC563 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C713981AE71C7C00AAC563 /* Main.storyboard */; };
 		22C7139C1AE71C7C00AAC563 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C7139B1AE71C7C00AAC563 /* Images.xcassets */; };
 		22C7139F1AE71C7C00AAC563 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C7139D1AE71C7C00AAC563 /* LaunchScreen.xib */; };
 		22C713AB1AE71C7C00AAC563 /* GTMassiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C713AA1AE71C7C00AAC563 /* GTMassiveTests.swift */; };
-		22C713B81AE72EA800AAC563 /* GTMassiveTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C713B71AE72EA800AAC563 /* GTMassiveTimeline.swift */; };
 		22C713BE1AE7351600AAC563 /* GTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C713BC1AE7351600AAC563 /* GTTableViewCell.swift */; };
 		22C713BF1AE7351600AAC563 /* GTTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C713BD1AE7351600AAC563 /* GTTableViewCell.xib */; };
+		22C8D3A21AE92428006FA2B8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C8D3A11AE92428006FA2B8 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		2251377E1AE857F300E81D4D /* SlideNavigationContorllerAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimator.h; sourceTree = "<group>"; };
 		2251377F1AE857F300E81D4D /* SidebBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebBarViewController.h; sourceTree = "<group>"; };
 		225137801AE857F300E81D4D /* SidebBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebBarViewController.m; sourceTree = "<group>"; };
+		22B713711AEB42A80074EF70 /* GTMassiveTimeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTMassiveTimeline.swift; sourceTree = "<group>"; };
+		22B713731AEB43EF0074EF70 /* GTMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTMainViewController.swift; sourceTree = "<group>"; };
 		22C7138F1AE71C7C00AAC563 /* GTMassive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GTMassive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C713931AE71C7C00AAC563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22C713941AE71C7C00AAC563 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,9 +86,9 @@
 		22C713AA1AE71C7C00AAC563 /* GTMassiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTMassiveTests.swift; sourceTree = "<group>"; };
 		22C713B41AE72C0900AAC563 /* GTMassive-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GTMassive-Bridging-Header.h"; sourceTree = "<group>"; };
 		22C713B51AE72C0900AAC563 /* Car_Paws.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car_Paws.h; sourceTree = "<group>"; };
-		22C713B71AE72EA800AAC563 /* GTMassiveTimeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTMassiveTimeline.swift; sourceTree = "<group>"; };
 		22C713BC1AE7351600AAC563 /* GTTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTTableViewCell.swift; sourceTree = "<group>"; };
 		22C713BD1AE7351600AAC563 /* GTTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTTableViewCell.xib; sourceTree = "<group>"; };
+		22C8D3A11AE92428006FA2B8 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DC44CFA6D52B8A9B3B2D6DCE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01BBA973A6D18A4E7A4E044 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F906E6831DEBCB956BB8AAB8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +195,8 @@
 				22C713941AE71C7C00AAC563 /* AppDelegate.swift */,
 				22C713961AE71C7C00AAC563 /* ViewController.swift */,
 				22C713981AE71C7C00AAC563 /* Main.storyboard */,
+				22B713731AEB43EF0074EF70 /* GTMainViewController.swift */,
+				22C8D3A11AE92428006FA2B8 /* MainViewController.swift */,
 				22C7139B1AE71C7C00AAC563 /* Images.xcassets */,
 				22C7139D1AE71C7C00AAC563 /* LaunchScreen.xib */,
 				22C713921AE71C7C00AAC563 /* Supporting Files */,
@@ -228,7 +234,7 @@
 		22C713B61AE72E5000AAC563 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				22C713B71AE72EA800AAC563 /* GTMassiveTimeline.swift */,
+				22B713711AEB42A80074EF70 /* GTMassiveTimeline.swift */,
 				2251375E1AE8447F00E81D4D /* GTCameraViewController.swift */,
 				225137621AE8475100E81D4D /* GTPhotoViewController.swift */,
 			);
@@ -402,12 +408,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				225137841AE857F300E81D4D /* SlideNavigationContorllerAnimatorFade.m in Sources */,
-				22C713B81AE72EA800AAC563 /* GTMassiveTimeline.swift in Sources */,
 				225137851AE857F300E81D4D /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				225137881AE857F300E81D4D /* SidebBarViewController.m in Sources */,
 				22C713971AE71C7C00AAC563 /* ViewController.swift in Sources */,
 				225137831AE857F300E81D4D /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
 				225137811AE857F300E81D4D /* LeftMenuViewController.m in Sources */,
+				22C8D3A21AE92428006FA2B8 /* MainViewController.swift in Sources */,
+				22B713721AEB42A80074EF70 /* GTMassiveTimeline.swift in Sources */,
+				22B713741AEB43EF0074EF70 /* GTMainViewController.swift in Sources */,
 				225137821AE857F300E81D4D /* RightMenuViewController.m in Sources */,
 				22C713BE1AE7351600AAC563 /* GTTableViewCell.swift in Sources */,
 				22C713951AE71C7C00AAC563 /* AppDelegate.swift in Sources */,
